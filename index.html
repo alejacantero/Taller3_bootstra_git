@@ -4,382 +4,275 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Alejandra Londoño Cantero | Desarrolladora de Software Senior en formación</title>
-
-    <meta name="description"
-        content="Hoja de vida profesional de Alejandra Londoño Cantero, estudiante de Análisis y Desarrollo de Software en Medellín.">
-
+    <meta name="description" content="Hoja de vida profesional de Alejandra Londoño Cantero, estudiante de Análisis y Desarrollo de Software en Medellín.">
     <link rel="shortcut icon" href="assets/img/aleja.png" type="image/x-icon">
-
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-
-    <style>
-        html {
-            scroll-behavior: smooth; /* Hace que los enlaces ancla hagan scroll suave */
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 
-<body>
+<body class="bg-light">
 
-    <!-- ✅ CORRECCIÓN: se eliminó el <header> duplicado que estaba anidado incorrectamente -->
     <header>
-        <!-- navbar: barra de navegación fija en la parte superior -->
-        <!-- navbar-expand-sm: se despliega horizontalmente desde pantallas "sm" en adelante -->
-        <!-- navbar-dark: texto e íconos en color claro (para fondos oscuros) -->
-        <!-- bg-dark: fondo negro/oscuro de Bootstrap -->
-        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-
-            <!-- container-fluid: contenedor que ocupa todo el ancho disponible -->
+       <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
             <div class="container-fluid">
 
-                <!-- navbar-brand: logo o nombre de la marca en la barra de navegación -->
-                <a class="navbar-brand" href="#">Logo</a>
-
-                <!-- navbar-toggler: botón hamburguesa visible solo en pantallas pequeñas -->
-                <!-- data-bs-toggle/target: indica qué elemento colapsar/expandir -->
                 <button class="navbar-toggler" type="button"
                     data-bs-toggle="collapse"
-                    data-bs-target="#collapsibleNavbar">
-                    <!-- navbar-toggler-icon: ícono de las tres líneas (hamburguesa) -->
+                    data-bs-target="#collapsibleNavbar"
+                    aria-controls="collapsibleNavbar"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <!-- collapse navbar-collapse: menú que se oculta/muestra en móviles -->
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
 
-                    <!-- navbar-nav: lista de enlaces de navegación -->
-                    <ul class="navbar-nav">
-
-                        <!-- nav-item: cada elemento de la lista de navegación -->
-                        <li class="nav-item">
-                            <!-- nav-link: estilo de enlace dentro de la barra de navegación -->
-                            <a class="nav-link" href="index.html">Inicio</a>
-                        </li>
+                    <ul class="navbar-nav me-auto mb-2 mb-sm-0">
 
                         <li class="nav-item">
-                            <a class="nav-link" href="app/tables.html">Tabla</a>
+                            <a class="btn btn-sm btn-outline-light rounded-pill me-1 mt-1 mt-lg-0" href="index.html">Inicio</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="btn btn-sm btn-outline-light rounded-pill me-1 mt-1 mt-lg-0" href="https://github.com/alejacantero/Taller3_bootstra_git">GitHub</a>
                         </li>
 
-                        <!-- dropdown: elemento con submenú desplegable -->
                         <li class="nav-item dropdown">
-                            <!-- dropdown-toggle: activa/desactiva el submenú al hacer clic -->
-                            <a class="nav-link dropdown-toggle"
+                            <a class="btn btn-sm btn-outline-light rounded-pill me-1 mt-1 mt-lg-0 dropdown-toggle"
                                href="#"
                                role="button"
-                               data-bs-toggle="dropdown">
+                               data-bs-toggle="dropdown"
+                               aria-expanded="false">
                                 Productos
                             </a>
-
-                            <!-- dropdown-menu: contenedor del submenú desplegable -->
-                            <ul class="dropdown-menu">
-                                <!-- dropdown-item: cada opción dentro del submenú -->
-                                <li><a class="dropdown-item" href="#">Producto 1</a></li>
-                                <li><a class="dropdown-item" href="#">Producto 2</a></li>
-                                <li><a class="dropdown-item" href="#">Producto 3</a></li>
+                            <ul class="dropdown-menu dropdown-menu-dark border-0 shadow">
+                                <li><a class="dropdown-item" href="app/tables.html">Tabla bootstrap</a></li>
+                                <li><a class="dropdown-item" href="app/github.html">Guia</a></li>
                             </ul>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#seccion4">Sección 4</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#seccion5">Sección 5</a>
                         </li>
 
                     </ul>
 
-                    <!-- ms-auto: margen izquierdo automático, empuja el botón hacia la derecha -->
-                    <div class="ms-auto">
-                        <li> <a class="btn btn-outline-light" href="app/forms.html"> acceso</a></li>
-                    </div>
+                    <a class="btn btn-outline-light" href="app/forms.html">Acceso</a>
 
                 </div>
-
             </div>
         </nav>
     </header>
 
     <main>
 
-        <!-- ===== CAROUSEL ===== -->
-        <!-- carousel slide: componente de carrusel con animación deslizante -->
-        <!-- data-bs-ride="carousel": reproduce automáticamente el carrusel -->
+        <!-- CAROUSEL -->
         <div id="demo" class="carousel slide" data-bs-ride="carousel">
-
-            <!-- carousel-indicators: puntos de navegación en la parte inferior del carrusel -->
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
-
-            <!-- carousel-inner: contenedor de todas las diapositivas -->
             <div class="carousel-inner">
-
-                <!-- carousel-item active: diapositiva visible al cargar la página -->
                 <div class="carousel-item active">
-                    <!-- d-block w-100: imagen ocupa todo el ancho del carrusel -->
                     <img src="assets/img/chicago.png" alt="Chicago" class="d-block w-100">
                 </div>
-
                 <div class="carousel-item">
                     <img src="assets/img/imgplaya.png" alt="Playa" class="d-block w-100">
                 </div>
-
                 <div class="carousel-item">
                     <img src="assets/img/otra.png" alt="Otra imagen" class="d-block w-100">
                 </div>
-
             </div>
-
-            <!-- carousel-control-prev/next: botones de navegación del carrusel -->
             <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
             </button>
-
             <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
             </button>
-
         </div>
 
-        <!-- ===== SECCIÓN 1 ===== -->
-        <!-- container py-5 text-center: sección centrada con padding vertical -->
-        <section id="seccion1" class="container py-5 text-center">
-
-            <h2>SECCIÓN 1</h2>
-
-            <!-- col-9 mx-auto: columna del 75% centrada horizontalmente -->
-            <!-- bg-body-secondary: fondo gris suave adaptado al tema -->
-            <!-- rounded border mb-3: bordes redondeados, borde y margen inferior -->
-            <div class="col-9 bg-body-secondary p-4 text-black rounded border mx-auto mb-3">
-                Columna 1
+        <!-- SECCIÓN 1 -->
+        <section id="seccion1" class="container py-5">
+            <h2 class="text-center fw-bold mb-4">
+                <span class="border-bottom border-2 border-dark pb-1">Sección 1</span>
+            </h2>
+            <div class="col-12 col-md-8 mx-auto d-flex flex-column gap-3">
+                <div class="card border-0 shadow-sm rounded-4">
+                    <div class="card-body d-flex align-items-center gap-3 p-4">
+                        <span class="badge bg-dark rounded-pill fs-6 px-3 py-2">1</span>
+                        <span class="fw-semibold">Columna 1</span>
+                    </div>
+                </div>
+                <div class="card border-0 shadow-sm rounded-4">
+                    <div class="card-body d-flex align-items-center gap-3 p-4">
+                        <span class="badge bg-dark rounded-pill fs-6 px-3 py-2">2</span>
+                        <span class="fw-semibold">Columna 2</span>
+                    </div>
+                </div>
+                <div class="card border-0 shadow-sm rounded-4">
+                    <div class="card-body d-flex align-items-center gap-3 p-4">
+                        <span class="badge bg-dark rounded-pill fs-6 px-3 py-2">3</span>
+                        <span class="fw-semibold">Columna 3</span>
+                    </div>
+                </div>
+                <div class="card border-0 shadow-sm rounded-4">
+                    <div class="card-body d-flex align-items-center gap-3 p-4">
+                        <span class="badge bg-dark rounded-pill fs-6 px-3 py-2">4</span>
+                        <span class="fw-semibold">Columna 4</span>
+                    </div>
+                </div>
             </div>
-
-            <div class="col-9 bg-body-secondary p-4 text-black rounded border mx-auto mb-3">
-                Columna 2
-            </div>
-
-            <div class="col-9 bg-body-secondary p-4 text-black rounded border mx-auto mb-3">
-                Columna 3
-            </div>
-
-            <div class="col-9 bg-body-secondary p-4 text-black rounded border mx-auto">
-                Columna 4
-            </div>
-
         </section>
 
-        <!-- ===== SECCIÓN 2 ===== -->
-        <section id="seccion2" class="container py-5">
-
-            <h2 class="text-center mb-4">Servicios</h2>
-
-            <!-- row justify-content-center g-4: fila centrada con espacio entre columnas -->
-            <div class="row justify-content-center g-4">
-
-                <!-- col-md-3: columna de 3/12 desde pantallas medianas -->
-                <div class="col-md-3">
-                    <!-- card shadow: tarjeta con sombra -->
-                    <div class="card shadow">
-                        <!-- card-body: contenido interno de la tarjeta -->
-                        <div class="card-body text-center">
-                            <h5>Columna 1</h5>
-                            <p>Contenido</p>
+        <!-- SECCIÓN 2 - Servicios -->
+        <section id="seccion2" class="bg-dark text-white py-5">
+            <div class="container">
+                <h2 class="text-center fw-bold mb-4">
+                    <span class="border-bottom border-2 border-light pb-1">Servicios</span>
+                </h2>
+                <div class="row justify-content-center g-4">
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="card bg-white bg-opacity-10 border-0 rounded-4 text-center text-white h-100">
+                            <div class="card-body p-4">
+                                <div class="mb-3">
+                                    <i class="bi bi-stars fs-1 text-warning"></i>
+                                </div>
+                                <h5 class="card-title fw-bold">Servicio 1</h5>
+                                <p class="card-text text-white-50">Contenido del servicio uno.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="card bg-white bg-opacity-10 border-0 rounded-4 text-center text-white h-100">
+                            <div class="card-body p-4">
+                                <div class="mb-3">
+                                    <i class="bi bi-lightning-charge fs-1 text-warning"></i>
+                                </div>
+                                <h5 class="card-title fw-bold">Servicio 2</h5>
+                                <p class="card-text text-white-50">Contenido del servicio dos.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="card bg-white bg-opacity-10 border-0 rounded-4 text-center text-white h-100">
+                            <div class="card-body p-4">
+                                <div class="mb-3">
+                                    <i class="bi bi-gem fs-1 text-warning"></i>
+                                </div>
+                                <h5 class="card-title fw-bold">Servicio 3</h5>
+                                <p class="card-text text-white-50">Contenido del servicio tres.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-md-3">
-                    <div class="card shadow">
-                        <div class="card-body text-center">
-                            <h5>Columna 2</h5>
-                            <p>Contenido</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="card shadow">
-                        <div class="card-body text-center">
-                            <h5>Columna 3</h5>
-                            <p>Contenido</p>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-
         </section>
 
-        <!-- ===== SECCIÓN 3 ===== -->
+        <!-- SECCIÓN 3 -->
         <section id="seccion3" class="container py-5">
-
-            <h2 class="text-center mb-4">SECCIÓN 3</h2>
-
+            <h2 class="text-center fw-bold mb-4">
+                <span class="border-bottom border-2 border-dark pb-1">Sección 3</span>
+            </h2>
             <div class="row justify-content-center g-4">
-
-                <!-- col-md-5: columna de 5/12 desde pantallas medianas -->
-                <!-- bg-light border rounded-4 shadow: fondo claro con borde, esquinas muy redondeadas y sombra -->
-                <div class="col-md-5">
-                    <div class="bg-light border rounded-4 shadow p-4 text-center">
-                        Cuadro 1
+                <div class="col-12 col-sm-6 col-lg-5">
+                    <div class="card border-0 shadow rounded-4 h-100">
+                        <div class="card-body p-4 text-center">
+                            <i class="bi bi-box-seam fs-2 text-secondary mb-2"></i>
+                            <h6 class="fw-bold mt-2">Cuadro 1</h6>
+                        </div>
                     </div>
                 </div>
-
-                <div class="col-md-5">
-                    <div class="bg-light border rounded-4 shadow p-4 text-center">
-                        Cuadro 2
+                <div class="col-12 col-sm-6 col-lg-5">
+                    <div class="card border-0 shadow rounded-4 h-100">
+                        <div class="card-body p-4 text-center">
+                            <i class="bi bi-box-seam fs-2 text-secondary mb-2"></i>
+                            <h6 class="fw-bold mt-2">Cuadro 2</h6>
+                        </div>
                     </div>
                 </div>
-
-                <div class="col-md-5">
-                    <div class="bg-light border rounded-4 shadow p-4 text-center">
-                        Cuadro 3
+                <div class="col-12 col-sm-6 col-lg-5">
+                    <div class="card border-0 shadow rounded-4 h-100">
+                        <div class="card-body p-4 text-center">
+                            <i class="bi bi-box-seam fs-2 text-secondary mb-2"></i>
+                            <h6 class="fw-bold mt-2">Cuadro 3</h6>
+                        </div>
                     </div>
                 </div>
-
-                <div class="col-md-5">
-                    <div class="bg-light border rounded-4 shadow p-4 text-center">
-                        Cuadro 4
+                <div class="col-12 col-sm-6 col-lg-5">
+                    <div class="card border-0 shadow rounded-4 h-100">
+                        <div class="card-body p-4 text-center">
+                            <i class="bi bi-box-seam fs-2 text-secondary mb-2"></i>
+                            <h6 class="fw-bold mt-2">Cuadro 4</h6>
+                        </div>
                     </div>
                 </div>
-
             </div>
-
         </section>
 
-        <!-- ===== SECCIÓN 4 ===== -->
-        <section id="seccion4" class="container py-5">
-
-            <h2 class="text-center mb-4">SECCIÓN 4</h2>
-
-            <!-- align-items-center: alinea verticalmente al centro todas las columnas -->
-            <div class="row justify-content-center align-items-center g-4">
-
-                <div class="col-md-3">
-                    <div class="bg-light border rounded-4 shadow p-4 text-center">
-                        Columna 1
+        <!-- SECCIÓN 4 -->
+        <section id="seccion4" class="bg-body-secondary py-5">
+            <div class="container">
+                <h2 class="text-center fw-bold mb-4">
+                    <span class="border-bottom border-2 border-dark pb-1">Sección 4</span>
+                </h2>
+                <div class="row justify-content-center align-items-center g-4">
+                    <div class="col-12 col-md-3">
+                        <div class="card border-0 shadow rounded-4 text-center p-4">
+                            <i class="bi bi-person-check fs-1 text-dark mb-2"></i>
+                            <p class="fw-semibold mb-0">Columna 1</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 text-center">
+                        <img src="assets/img/nube.png"
+                            alt="Imagen"
+                            class="img-fluid rounded-circle border border-3 border-dark shadow"
+                            style="width: 200px; height: 200px; object-fit: cover;">
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <div class="card border-0 shadow rounded-4 text-center p-4">
+                            <i class="bi bi-shield-check fs-1 text-dark mb-2"></i>
+                            <p class="fw-semibold mb-0">Columna 3</p>
+                        </div>
                     </div>
                 </div>
-
-                <div class="col-md-3 text-center">
-                    <!-- img-fluid: imagen responsiva -->
-                    <!-- rounded-circle: imagen en forma circular -->
-                    <img src="assets/img/nube.png"
-                        alt="Imagen"
-                        class="img-fluid rounded-circle border shadow"
-                        style="width: 200px; height: 200px; object-fit: cover;">
-                </div>
-
-                <div class="col-md-3">
-                    <div class="bg-light border rounded-4 shadow p-4 text-center">
-                        Columna 3
-                    </div>
-                </div>
-
             </div>
-
         </section>
 
-        <!-- ===== SECCIÓN 5 ===== -->
+        <!-- SECCIÓN 5 -->
         <section id="seccion5" class="container py-5">
-
-            <h2 class="text-center mb-4">SECCIÓN 5</h2>
-
-            <!-- align-items-stretch: todas las columnas tienen la misma altura -->
+            <h2 class="text-center fw-bold mb-4">
+                <span class="border-bottom border-2 border-dark pb-1">Sección 5</span>
+            </h2>
             <div class="row justify-content-center g-4 align-items-stretch">
-
-                <div class="col-md-3">
-                    <!-- h-100: altura del 100% para igualar la columna vecina -->
-                    <div class="bg-light border rounded-4 shadow p-4 h-100">
-                        Columna Izquierda
+                <div class="col-12 col-md-3">
+                    <div class="card border-0 shadow rounded-4 h-100 bg-dark text-white">
+                        <div class="card-body p-4">
+                            <i class="bi bi-bookmark-star fs-2 mb-3"></i>
+                            <p class="fw-semibold">Columna Izquierda</p>
+                        </div>
                     </div>
                 </div>
-
-                <!-- col-md-7: columna más ancha para el contenido principal -->
-                <div class="col-md-7">
-                    <div class="bg-light border rounded-4 shadow p-4">
-                        Mucho contenido aquí...
-                        <br><br><br><br><br><br>
+                <div class="col-12 col-md-7">
+                    <div class="card border-0 shadow rounded-4 h-100">
+                        <div class="card-body p-4">
+                            <p class="fw-semibold mb-3">Contenido principal</p>
+                            <p class="text-muted">Mucho contenido aquí...</p>
+                            <br><br><br><br>
+                        </div>
                     </div>
                 </div>
-
             </div>
-
         </section>
 
     </main>
 
-    <!-- Footer: pie de página con fondo oscuro y texto blanco -->
-    <footer class="text-center p-3 bg-dark text-white">
-        aaa
+    <footer class="py-4 bg-dark text-white text-center">
+        <div class="container">
+            <p class="mb-0 text-white-50 small">
+                <i class="bi bi-c-circle me-1"></i>Alejandra Londoño Cantero &amp; todos los derechos reservados
+            </p>
+        </div>
     </footer>
 
-    <!-- Bootstrap JS: incluye Popper.js para modales y dropdowns -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- ===== MODAL DE INICIO DE SESIÓN ===== -->
-    <!-- ✅ CORRECCIÓN: movido adentro del body (antes estaba después del </body>) -->
-    <!-- modal fade: modal con animación suave de aparición -->
-    <!-- tabindex="-1": excluye el modal del tabulado cuando está oculto -->
-    <div class="modal fade" id="loginModal" tabindex="-1">
-
-        <!-- modal-dialog: centra y dimensiona el cuadro del modal -->
-        <div class="modal-dialog">
-
-            <!-- modal-content: caja visual del modal -->
-            <div class="modal-content">
-
-                <!-- modal-header: encabezado con título y botón de cierre -->
-                <div class="modal-header">
-                    <!-- modal-title: título del modal -->
-                    <h5 class="modal-title">Iniciar sesión</h5>
-                    <!-- btn-close: botón X para cerrar el modal -->
-                    <!-- data-bs-dismiss: cierra el modal al hacer clic -->
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-
-                <!-- modal-body: contenido principal del modal -->
-                <div class="modal-body">
-
-                    <form>
-
-                        <!-- mb-3: espacio inferior entre campos -->
-                        <div class="mb-3">
-                            <!-- form-label: etiqueta estilizada del campo -->
-                            <label class="form-label">Usuario</label>
-                            <!-- form-control: input estilizado de Bootstrap -->
-                            <input type="text" class="form-control">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Contraseña</label>
-                            <!-- type="password": oculta los caracteres al escribir -->
-                            <input type="password" class="form-control">
-                        </div>
-
-                        <!-- btn btn-success: botón verde para confirmar acción -->
-                        <button type="submit" class="btn btn-success">Entrar</button>
-
-                    </form>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
 </body>
-
 </html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Alejandra Londoño Cantero | Desarrolladora de Software Senior en formación</title>
+  <meta name="description" content="Hoja de vida profesional de Alejandra Londoño Cantero, estudiante de Análisis y Desarrollo de Software en Medellín." />
+
+  <link rel="shortcut icon" href="assets/img/aleja.png" type="image/x-icon" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body class="bg-body-tertiary">
+
+  <header>
+    <!-- navbar: barra de navegación | navbar-expand-sm: se despliega horizontal desde "sm" | navbar-dark: texto claro | bg-dark: fondo oscuro | sticky-top: siempre visible al hacer scroll -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+
+      <!-- container-fluid: ocupa todo el ancho disponible -->
+      <div class="container-fluid">
+
+        <!-- navbar-toggler: botón hamburguesa en pantallas pequeñas -->
+        <button class="navbar-toggler" type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapsibleNavbar"
+          aria-controls="collapsibleNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <!-- navbar-toggler-icon: ícono de tres líneas -->
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- collapse navbar-collapse: menú que se oculta/muestra en móviles -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+
+          <!-- navbar-nav: lista de enlaces | me-auto: empuja el resto a la derecha -->
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+            <!-- nav-item: elemento de la lista | nav-link: enlace estilizado -->
+            <li class="nav-item">
+              <a class="btn btn-sm btn-outline-light rounded-pill me-1 mt-1 mt-lg-0" href="../index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-sm btn-outline-light rounded-pill me-1 mt-1 mt-lg-0" href="https://github.com/alejacantero/Taller3_bootstra_git">GitHub</a>
+            </li>
+             <li class="nav-item">
+              <a class="btn btn-sm btn-outline-light rounded-pill me-1 mt-1 mt-lg-0" href="../app/tables.html">Tabla</a>
+            </li> 
+
+            <!-- divider-vertical: separador visual entre secciones del navbar -->
+            <li class="nav-item">
+              <span class="nav-link text-secondary disabled px-1">|</span>
+            </li>
+
+            <!-- btn btn-sm: botón pequeño | btn-outline-light: borde blanco | rounded-pill: forma de píldora | nav-item: dentro del menú -->
+            <li class="nav-item">
+              <a class="btn btn-sm btn-outline-light rounded-pill me-1 mt-1 mt-lg-0" href="#estructura">
+                <i class="bi bi-folder2-open me-1"></i>Estructura
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="btn btn-sm btn-outline-success rounded-pill me-1 mt-1 mt-lg-0" href="#requisitos">
+                <i class="bi bi-check2-circle me-1"></i>Requisitos
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="btn btn-sm btn-outline-info rounded-pill me-1 mt-1 mt-lg-0" href="#git">
+                <i class="bi bi-gear me-1"></i>Configuración
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="btn btn-sm btn-outline-warning rounded-pill me-1 mt-1 mt-lg-0" href="#inicializar">
+                <i class="bi bi-terminal me-1"></i>Inicializar
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="btn btn-sm btn-outline-primary rounded-pill me-1 mt-1 mt-lg-0" href="#github">
+                <i class="bi bi-github me-1"></i>Repositorio
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="btn btn-sm btn-outline-danger rounded-pill me-1 mt-1 mt-lg-0" href="#conectar">
+                <i class="bi bi-link-45deg me-1"></i>Conectar
+              </a>
+            </li>
+
+          </ul>
+
+          <!-- ms-auto: margen izquierdo automático, empuja el botón a la derecha -->
+          <a class="btn btn-sm btn-outline-light rounded-pill me-1 mt-1 mt-lg-0" href="forms.html">Acceso</a>
+
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container py-5">
+
+    <!-- ===== SECCIÓN 1: Estructura del proyecto ===== -->
+    <!-- card border-0: tarjeta sin borde | shadow-lg: sombra grande | mb-5: margen inferior amplio | rounded-4: esquinas muy redondeadas -->
+    <div class="card border-0 shadow-lg mb-5 rounded-4 overflow-hidden" id="estructura">
+
+      <!-- card-header: encabezado | bg-primary: fondo azul | text-white: texto blanco | py-3: padding vertical -->
+      <div class="card-header bg-primary text-white py-3 d-flex align-items-center gap-2">
+        <!-- badge: etiqueta destacada | bg-white: fondo blanco | text-primary: texto azul | rounded-pill: forma de píldora -->
+        <span class="badge bg-white text-primary rounded-pill fs-6">1</span>
+        <h2 class="mb-0 fs-4">Estructura del proyecto</h2>
+      </div>
+
+      <!-- card-body: contenido | p-4: padding amplio -->
+      <div class="card-body p-4">
+
+        <!-- bg-dark: fondo oscuro | text-success: texto verde (estilo terminal) | p-4: padding | rounded-3: bordes redondeados -->
+        <pre class="bg-dark text-success p-4 rounded-3 fs-6">
+<span class="text-white fw-bold">Estructura de las carpetas del proyecto:</span>
+taller3/
+
+│── app/
+│    ├── forms.html
+│    ├── tables.html
+│    └── github.html
+│── assets/
+│    ├── css/
+│    ├── img/
+│    └── js/
+│── index.html
+│── README.md
+        </pre>
+
+      </div>
+    </div>
+
+    <!-- ===== SECCIÓN 2: Requisitos iniciales ===== -->
+    <div class="card border-0 shadow-lg mb-5 rounded-4 overflow-hidden" id="requisitos">
+
+      <div class="card-header bg-success text-white py-3 d-flex align-items-center gap-2">
+        <span class="badge bg-white text-success rounded-pill fs-6">2</span>
+        <h2 class="mb-0 fs-4">Requisitos iniciales</h2>
+      </div>
+
+      <div class="card-body p-4">
+
+        <!-- list-group: lista | list-group-flush: sin bordes externos -->
+        <ul class="list-group list-group-flush rounded-3">
+          <!-- list-group-item: ítem | d-flex: flexbox | align-items-center: alineación vertical | gap-2: espacio entre ícono y texto -->
+          <li class="list-group-item d-flex align-items-center gap-2 py-3">
+            <!-- text-success: ícono verde -->
+            <i class="bi bi-check-circle-fill text-success fs-5"></i>
+            Tener cuenta activa en GitHub
+          </li>
+          <li class="list-group-item d-flex align-items-center gap-2 py-3">
+            <i class="bi bi-check-circle-fill text-success fs-5"></i>
+            Tener Git instalado
+          </li>
+          <li class="list-group-item d-flex align-items-center gap-2 py-3">
+            <i class="bi bi-check-circle-fill text-success fs-5"></i>
+            Tener Visual Studio Code
+          </li>
+          <li class="list-group-item d-flex align-items-center gap-2 py-3">
+            <i class="bi bi-check-circle-fill text-success fs-5"></i>
+            Abrir el proyecto desde VS Code
+          </li>
+        </ul>
+
+      </div>
+    </div>
+
+    <!-- ===== SECCIÓN 3: Configuración de Git ===== -->
+    <div class="card border-0 shadow-lg mb-5 rounded-4 overflow-hidden" id="git">
+
+      <div class="card-header bg-info text-white py-3 d-flex align-items-center gap-2">
+        <span class="badge bg-white text-info rounded-pill fs-6">3</span>
+        <h2 class="mb-0 fs-4">Configuración de Git</h2>
+      </div>
+
+      <div class="card-body p-4">
+
+        <!-- text-muted: texto gris suave | fw-semibold: semi-negrita -->
+        <p class="text-muted mb-2 fw-semibold">Configuración del usuario en Git:</p>
+
+        <div class="bg-dark text-success p-4 rounded-3 mb-4 font-monospace">
+          <p class="mb-1"><span class="text-warning">$</span> git config --global user.name "Tu Nombre"</p>
+          <!-- border-top border-secondary: separador sutil -->
+          <div class="border-top border-secondary pt-2">
+            <p class="mb-0"><span class="text-warning">$</span> git config --global user.email "correo@ejemplo.com"</p>
+          </div>
+        </div>
+
+        <p class="text-muted mb-2 fw-semibold">Verificar configuración:</p>
+
+        <div class="bg-dark text-success p-4 rounded-3 font-monospace">
+          <span class="text-warning">$</span> git config --global --list
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== SECCIÓN 4: Inicializar Git ===== -->
+    <div class="card border-0 shadow-lg mb-5 rounded-4 overflow-hidden" id="inicializar">
+
+      <div class="card-header bg-warning py-3 d-flex align-items-center gap-2">
+        <span class="badge bg-dark text-warning rounded-pill fs-6">4</span>
+        <h2 class="mb-0 fs-4">Inicializar Git en el proyecto</h2>
+      </div>
+
+      <div class="card-body p-4">
+
+        <p class="text-muted mb-2 fw-semibold">Ubicarse en la carpeta del proyecto y ejecutar:</p>
+
+        <div class="bg-dark text-success p-4 rounded-3 mb-4 font-monospace">
+          <p class="mb-1"><span class="text-warning">$</span> git init</p>
+          <p class="mb-1"><span class="text-warning">$</span> git add .</p>
+          <p class="mb-0"><span class="text-warning">$</span> git commit -m "Primer commit: estructura inicial"</p>
+        </div>
+
+        <!-- alert alert-warning: alerta amarilla | d-flex: flexbox | align-items-center: centrado vertical -->
+        <div class="alert alert-warning d-flex align-items-center gap-2 mb-0 rounded-3" role="alert">
+          <i class="bi bi-info-circle-fill fs-5"></i>
+          Esto permite crear un historial de cambios del proyecto.
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== SECCIÓN 5: Crear repositorio en GitHub ===== -->
+    <div class="card border-0 shadow-lg mb-5 rounded-4 overflow-hidden" id="github">
+
+      <div class="card-header bg-primary text-white py-3 d-flex align-items-center gap-2">
+        <span class="badge bg-white text-primary rounded-pill fs-6">5</span>
+        <h2 class="mb-0 fs-4">Crear repositorio en GitHub</h2>
+      </div>
+
+      <div class="card-body p-4">
+
+        <!-- list-group-numbered: lista numerada automáticamente por Bootstrap -->
+        <ol class="list-group list-group-numbered list-group-flush rounded-3">
+          <li class="list-group-item py-3">Ingresar a GitHub</li>
+          <li class="list-group-item py-3">Hacer clic en "New repository"</li>
+          <li class="list-group-item py-3">Agregar un nombre al repositorio, ej: <strong>taller3_bootstrap_github</strong></li>
+          <li class="list-group-item py-3">Seleccionar si será público o privado</li>
+          <li class="list-group-item py-3">Crear el repositorio sin agregar README si el proyecto ya tiene archivos en local</li>
+        </ol>
+
+      </div>
+    </div>
+
+    <!-- ===== SECCIÓN 6: Conectar proyecto local con GitHub ===== -->
+    <div class="card border-0 shadow-lg mb-5 rounded-4 overflow-hidden" id="conectar">
+
+      <div class="card-header bg-warning py-3 d-flex align-items-center gap-2">
+        <span class="badge bg-dark text-warning rounded-pill fs-6">6</span>
+        <h2 class="mb-0 fs-4">Conectar proyecto local con GitHub</h2>
+      </div>
+
+      <div class="card-body p-4">
+
+        <p class="text-muted mb-2 fw-semibold">Copiar la <strong>URL</strong> del repositorio creado y ejecutar:</p>
+
+        <div class="bg-dark text-success p-4 rounded-3 mb-4 font-monospace">
+          <p class="mb-1"><span class="text-warning">$</span> git remote add origin https://github.com/usuario/proyecto-bootstrap-adso.git</p>
+          <p class="mb-1"><span class="text-warning">$</span> git branch -M main</p>
+          <p class="mb-0"><span class="text-warning">$</span> git push -u origin main</p>
+        </div>
+
+        <!-- alert alert-danger: alerta roja para advertencias importantes -->
+        <div class="alert alert-danger d-flex align-items-center gap-2 mb-0 rounded-3" role="alert">
+          <i class="bi bi-exclamation-triangle-fill fs-5"></i>
+          <strong>Cambia usuario y proyecto por datos reales de tu repositorio.</strong>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- py-3: padding vertical | bg-dark: fondo oscuro | text-white: texto blanco -->
+  <footer class="py-3 bg-dark text-white text-center">
+    <div class="container">
+      <p class="mb-0">Alejandra Londoño Cantero &amp; todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS: incluye Popper.js para modales y dropdowns -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

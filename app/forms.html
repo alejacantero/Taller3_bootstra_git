@@ -10,191 +10,16 @@
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
-  <style>
-    html { scroll-behavior: smooth; }
-
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-      min-height: 100vh;
-    }
-
-    /* ── NAVBAR ── */
-    .navbar { position: sticky; top: 0; z-index: 1030; }
-
-    /* ── SECCIÓN PRINCIPAL: dos paneles lado a lado ── */
-    .auth-section {
-      display: flex;
-      min-height: calc(100vh - 56px); /* resta la altura del navbar */
-    }
-
-    .auth-panel {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 3rem 2rem;
-    }
-
-    /* Divisor vertical entre los dos paneles */
-    .auth-divider {
-      width: 1px;
-      background: rgba(255, 255, 255, 0.1);
-      align-self: stretch;
-      margin: 2rem 0;
-    }
-
-    /* ── TARJETA de formulario ── */
-    .auth-card {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      backdrop-filter: blur(16px);
-      border-radius: 1.25rem;
-      padding: 2.5rem;
-      width: 100%;
-      max-width: 420px;
-      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
-    }
-
-    .brand-icon {
-      width: 48px;
-      height: 48px;
-      background: linear-gradient(135deg, #6c63ff, #3ecfcf);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.4rem;
-      color: white;
-      margin: 0 auto 1rem;
-    }
-
-    .auth-title {
-      color: #ffffff;
-      font-size: 1.4rem;
-      font-weight: 700;
-      text-align: center;
-      margin-bottom: 0.25rem;
-    }
-
-    .auth-subtitle {
-      color: rgba(255,255,255,0.45);
-      font-size: 0.85rem;
-      text-align: center;
-      margin-bottom: 1.75rem;
-    }
-
-    /* ── Inputs ── */
-    .form-label {
-      color: rgba(255,255,255,0.7);
-      font-size: 0.82rem;
-      font-weight: 600;
-      letter-spacing: 0.03em;
-      margin-bottom: 0.35rem;
-    }
-
-    .form-control {
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.12);
-      color: #ffffff;
-      border-radius: 0.65rem;
-      padding: 0.6rem 0.9rem;
-      font-size: 0.9rem;
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-
-    .form-control::placeholder { color: rgba(255,255,255,0.3); }
-
-    .form-control:focus {
-      background: rgba(255,255,255,0.1);
-      border-color: #6c63ff;
-      box-shadow: 0 0 0 3px rgba(108,99,255,0.25);
-      color: #ffffff;
-    }
-
-    .input-group-text {
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.12);
-      color: rgba(255,255,255,0.4);
-      border-right: none;
-      border-radius: 0.65rem 0 0 0.65rem;
-    }
-
-    .input-group .form-control {
-      border-left: none;
-      border-radius: 0 0.65rem 0.65rem 0;
-    }
-
-    .input-group:focus-within .input-group-text {
-      border-color: #6c63ff;
-    }
-
-    /* ── Botón principal ── */
-    .btn-auth {
-      background: linear-gradient(135deg, #6c63ff, #3ecfcf);
-      border: none;
-      border-radius: 0.65rem;
-      color: white;
-      font-weight: 700;
-      font-size: 0.9rem;
-      padding: 0.65rem;
-      width: 100%;
-      letter-spacing: 0.04em;
-      transition: opacity 0.2s, transform 0.15s;
-    }
-
-    .btn-auth:hover  { opacity: 0.88; transform: translateY(-1px); color: white; }
-    .btn-auth:active { transform: translateY(0); }
-
-    /* ── Etiqueta lateral ── */
-    .panel-label {
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.3);
-      text-align: center;
-      margin-bottom: 1.5rem;
-    }
-
-    .forgot-link {
-      color: rgba(255,255,255,0.4);
-      font-size: 0.8rem;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    .forgot-link:hover { color: #3ecfcf; }
-
-    .terms-text {
-      color: rgba(255,255,255,0.35);
-      font-size: 0.75rem;
-      text-align: center;
-    }
-    .terms-text a { color: #6c63ff; text-decoration: none; }
-    .terms-text a:hover { text-decoration: underline; }
-
-    /* ── Responsive: apilar en móvil ── */
-    @media (max-width: 767px) {
-      .auth-section  { flex-direction: column; }
-      .auth-divider  { width: 80%; height: 1px; margin: 0 auto; align-self: auto; }
-      .auth-panel    { padding: 2rem 1rem; }
-    }
-  </style>
 </head>
 
 <body>
-
-  <!-- ══════════════ NAVBAR ══════════════ -->
-  <header>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <header>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
       <div class="container-fluid">
-
-        <a class="navbar-brand" href="#">Logo</a>
 
         <button class="navbar-toggler" type="button"
           data-bs-toggle="collapse"
@@ -205,167 +30,342 @@
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
           <ul class="navbar-nav">
 
-            <li class="nav-item">
-              <a class="nav-link" href="../index.html">Inicio</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="../app/tables.html">Tabla</a>
-            </li>
-
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                Productos
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Producto 1</a></li>
-                <li><a class="dropdown-item" href="#">Producto 2</a></li>
-                <li><a class="dropdown-item" href="#">Producto 3</a></li>
-              </ul>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="#seccion4">Sección 4</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="#seccion5">Sección 5</a>
-            </li>
-
+           
+                        <!-- nav-item: elemento de la lista | nav-link: enlace estilizado -->
+                        <li class="nav-item">
+                            <a class="btn btn-sm btn-outline-light rounded-pill me-1 mt-1 mt-lg-0" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="btn btn-sm btn-outline-light rounded-pill me-1 mt-1 mt-lg-0" href="https://github.com/alejacantero/Taller3_bootstra_git">GitHub</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="btn btn-sm btn-outline-light rounded-pill me-1 mt-1 mt-lg-0 dropdown-toggle"
+                               href="#"
+                               role="button"
+                               data-bs-toggle="dropdown"
+                               aria-expanded="false">
+                                Productos
+                          </a>
+                      <ul class="dropdown-menu dropdown-menu-dark border-0 shadow">
+                          <li><a class="dropdown-item" href="tables.html">Tabla bootstrap</a></li>
+                          <li><a class="dropdown-item" href="github.html">Guia</a></li>
+                     </ul>
+                        </li>
           </ul>
+          <!-- ms-auto: empuja el botón hacia la derecha -->
+          <div class="ms-auto">
+            <a class="btn btn-outline-light" href="../index.html">
+              <i class="bi bi-person-circle me-1"></i>Salir
+            </a>
+          </div>
+
         </div>
 
       </div>
     </nav>
   </header>
 
-  <!-- ══════════════ MAIN: Login + Registro ══════════════ -->
+  <!-- MAIN: Login + Registro -->
   <main>
-    <section class="auth-section">
 
-      <!-- ── Panel izquierdo: INICIAR SESIÓN ── -->
-      <div class="auth-panel">
-        <div class="auth-card">
+    <section class="container py-5">
 
-          <div class="brand-icon">
-            <i class="bi bi-box-arrow-in-right"></i>
-          </div>
-          <p class="panel-label">Bienvenido de vuelta</p>
-          <h2 class="auth-title">Iniciar sesión</h2>
-          <p class="auth-subtitle">Accede a tu cuenta con tu correo y contraseña</p>
+      <div class="row justify-content-center align-items-center g-4">
 
-          <form novalidate>
+        <!-- INICIAR SESIÓN -->
+        <div class="col-md-5">
 
-            <div class="mb-3">
-              <label class="form-label" for="loginEmail">Correo electrónico</label>
-              <div class="input-group">
-                <span class="input-group-text"><i class="bi bi-envelope"></i></span>
-                <input type="email" class="form-control" id="loginEmail"
-                  placeholder="correo@ejemplo.com" required>
-              </div>
+          <div class="card shadow p-4 h-100">
+
+            <div class="text-center mb-3">
+              <i class="bi bi-box-arrow-in-right fs-1"></i>
             </div>
 
-            <div class="mb-2">
-              <label class="form-label" for="loginPassword">Contraseña</label>
-              <div class="input-group">
-                <span class="input-group-text"><i class="bi bi-lock"></i></span>
-                <input type="password" class="form-control" id="loginPassword"
+            <p class="text-center text-secondary">
+              Bienvenido de vuelta
+            </p>
+
+            <h2 class="text-center">
+              Iniciar sesión
+            </h2>
+
+            <p class="text-center text-muted">
+              Accede a tu cuenta con tu correo y contraseña
+            </p>
+
+
+            <form novalidate>
+
+              <div class="mb-3">
+
+                <label class="form-label" for="loginEmail">
+                  Correo electrónico
+                </label>
+
+                <div class="input-group">
+
+                  <span class="input-group-text">
+                    <i class="bi bi-envelope"></i>
+                  </span>
+
+                  <input type="email" class="form-control" id="loginEmail"
+                  placeholder="correo@ejemplo.com" required>
+
+                </div>
+
+              </div>
+
+
+              <div class="mb-2">
+
+                <label class="form-label" for="loginPassword">
+                  Contraseña
+                </label>
+
+                <div class="input-group">
+
+                  <span class="input-group-text">
+                    <i class="bi bi-lock"></i>
+                  </span>
+
+                  <input type="password" class="form-control" id="loginPassword"
                   placeholder="Tu contraseña" required>
+
+                </div>
+
               </div>
-            </div>
 
-            <div class="text-end mb-4">
-              <a href="#" class="forgot-link">¿Olvidaste tu contraseña?</a>
-            </div>
 
-            <button type="submit" class="btn btn-auth mb-3">
-              <i class="bi bi-box-arrow-in-right me-2"></i>Iniciar sesión
-            </button>
+              <div class="text-end mb-4">
 
-            <p class="terms-text">
-              Al ingresar aceptas nuestros
-              <a href="#">Términos de uso</a> y
-              <a href="#">Política de privacidad</a>.
-            </p>
+                <a href="#" class="link-primary">
+                  ¿Olvidaste tu contraseña?
+                </a>
 
-          </form>
-        </div>
-      </div>
+              </div>
 
-      <!-- Divisor vertical -->
-      <div class="auth-divider"></div>
 
-      <!-- ── Panel derecho: REGISTRARSE ── -->
-      <div class="auth-panel">
-        <div class="auth-card">
+              <button type="submit" class="btn btn-primary w-100 mb-3">
 
-          <div class="brand-icon">
-            <i class="bi bi-person-plus"></i>
+                <i class="bi bi-box-arrow-in-right me-2"></i>
+                Iniciar sesión
+
+              </button>
+
+
+              <p class="text-center small">
+
+                Al ingresar aceptas nuestros
+                <a href="#">Términos de uso</a>
+                y
+                <a href="#">Política de privacidad</a>.
+
+              </p>
+
+
+            </form>
+
+
           </div>
-          <p class="panel-label">Crea tu cuenta</p>
-          <h2 class="auth-title">Registrarse</h2>
-          <p class="auth-subtitle">Completa el formulario para comenzar</p>
 
-          <form novalidate>
+        </div>
 
-            <div class="mb-3">
-              <label class="form-label" for="registerName">Nombre completo</label>
-              <div class="input-group">
-                <span class="input-group-text"><i class="bi bi-person"></i></span>
-                <input type="text" class="form-control" id="registerName"
-                  placeholder="Tu nombre" required>
-              </div>
+
+        <!-- REGISTRO -->
+
+        <div class="col-md-5">
+
+
+          <div class="card shadow p-4 h-100">
+
+
+            <div class="text-center mb-3">
+
+              <i class="bi bi-person-plus fs-1"></i>
+
             </div>
 
-            <div class="mb-3">
-              <label class="form-label" for="registerEmail">Correo electrónico</label>
-              <div class="input-group">
-                <span class="input-group-text"><i class="bi bi-envelope"></i></span>
-                <input type="email" class="form-control" id="registerEmail"
-                  placeholder="correo@ejemplo.com" required>
-              </div>
-            </div>
 
-            <div class="mb-3">
-              <label class="form-label" for="registerPassword">Contraseña</label>
-              <div class="input-group">
-                <span class="input-group-text"><i class="bi bi-lock"></i></span>
-                <input type="password" class="form-control" id="registerPassword"
-                  placeholder="Mínimo 8 caracteres" required>
-              </div>
-            </div>
+            <p class="text-center text-secondary">
 
-            <div class="mb-4">
-              <label class="form-label" for="registerConfirm">Confirmar contraseña</label>
-              <div class="input-group">
-                <span class="input-group-text"><i class="bi bi-shield-lock"></i></span>
-                <input type="password" class="form-control" id="registerConfirm"
-                  placeholder="Repite tu contraseña" required>
-              </div>
-            </div>
+              Crea tu cuenta
 
-            <button type="submit" class="btn btn-auth mb-3">
-              <i class="bi bi-person-plus me-2"></i>Crear cuenta
-            </button>
-
-            <p class="terms-text">
-              Al registrarte aceptas nuestros
-              <a href="#">Términos de uso</a> y
-              <a href="#">Política de privacidad</a>.
             </p>
 
-          </form>
+
+            <h2 class="text-center">
+
+              Registrarse
+
+            </h2>
+
+
+            <p class="text-center text-muted">
+
+              Completa el formulario para comenzar
+
+            </p>
+
+
+
+            <form novalidate>
+
+
+              <div class="mb-3">
+
+                <label class="form-label">
+
+                  Nombre completo
+
+                </label>
+
+
+                <div class="input-group">
+
+                  <span class="input-group-text">
+                    <i class="bi bi-person"></i>
+                  </span>
+
+
+                  <input type="text" class="form-control"
+                  placeholder="Tu nombre" required>
+
+                </div>
+
+              </div>
+
+
+
+
+              <div class="mb-3">
+
+                <label class="form-label">
+
+                  Correo electrónico
+
+                </label>
+
+
+                <div class="input-group">
+
+                  <span class="input-group-text">
+                    <i class="bi bi-envelope"></i>
+                  </span>
+
+
+                  <input type="email" class="form-control"
+                  placeholder="correo@ejemplo.com" required>
+
+                </div>
+
+              </div>
+
+
+
+
+
+              <div class="mb-3">
+
+                <label class="form-label">
+
+                  Contraseña
+
+                </label>
+
+
+                <div class="input-group">
+
+                  <span class="input-group-text">
+                    <i class="bi bi-lock"></i>
+                  </span>
+
+
+                  <input type="password" class="form-control"
+                  placeholder="Mínimo 8 caracteres" required>
+
+                </div>
+
+              </div>
+
+
+
+
+
+              <div class="mb-4">
+
+                <label class="form-label">
+
+                  Confirmar contraseña
+
+                </label>
+
+
+                <div class="input-group">
+
+                  <span class="input-group-text">
+                    <i class="bi bi-shield-lock"></i>
+                  </span>
+
+
+                  <input type="password" class="form-control"
+                  placeholder="Repite tu contraseña" required>
+
+
+                </div>
+
+              </div>
+
+
+
+              <button type="submit" class="btn btn-success w-100 mb-3">
+
+                <i class="bi bi-person-plus me-2"></i>
+                Crear cuenta
+
+              </button>
+
+
+
+
+              <p class="text-center small">
+
+                Al registrarte aceptas nuestros
+                <a href="#">Términos de uso</a>
+                y
+                <a href="#">Política de privacidad</a>.
+
+              </p>
+
+
+            </form>
+
+
+          </div>
+
+
         </div>
+
+
       </div>
+
 
     </section>
+
+
   </main>
 
-  <!-- Bootstrap JS -->
+
+
+  <footer class="text-center p-3 border-top small">
+
+    Alejandra Londoño Cantero &amp; todos los derechos reservados
+
+  </footer>
+
+
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
-   <footer>
-    Alejandra Londoño Cantero & todos los derechos reservados
-  </footer>
+
 </body>
 </html>
